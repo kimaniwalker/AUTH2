@@ -3,6 +3,7 @@ import peopleRouter from './people';
 import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
+import blogListRouter from './blogList';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 
 let router = Router();
@@ -21,5 +22,6 @@ router.use(isLoggedIn);
 
 router.use('/people', peopleRouter);
 router.use('/users', usersRouter);
+router.use('/blogList', blogListRouter);
 
 export default router;
