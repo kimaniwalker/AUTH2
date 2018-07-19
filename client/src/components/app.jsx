@@ -9,6 +9,7 @@ import AuthButton from './auth/authButton';
 import BlogList from './blogList';
 import BlogInput from './blogInput';
 import BlogAdmin from './admin';
+import SingleBlogPost from './singleBlog';
 
 
 class Navigation extends Component {
@@ -19,11 +20,13 @@ class Navigation extends Component {
                     <Link to="/goodbye">Goodbye</Link>
                     <Link to="/blogList">Our Blogs</Link>
                     <Link to="/newPost">New Post</Link>
+                    <Link to="/bloglist/:id">New Post</Link>
                     <Link to="/admin">Admin</Link>
                     <AuthButton />
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
                         <Route path="/blogList" component={BlogList} />
+                        <Route path="/bloglist/:id" component={SingleBlogPost} />
                         <Route path="/newPost" component={BlogInput} />
                         <Route path="/login" component={Login} />
                         <Route path="/logout" component={Logout} />
