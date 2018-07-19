@@ -17,8 +17,8 @@ router.route('*')
 
 router.use('/classes', classesRouter);
 
-router.use(tokenMiddleware);
-router.use(isLoggedIn);
+/* router.use(tokenMiddleware);
+router.use(isLoggedIn); */
 
 router.use('/people', peopleRouter);
 router.use('/users', usersRouter);
