@@ -20,7 +20,6 @@ class Navigation extends Component {
                     <Link to="/goodbye">Goodbye</Link>
                     <Link to="/blogList">Our Blogs</Link>
                     <Link to="/newPost">New Post</Link>
-                    <Link to="/bloglist/:id">New Post</Link>
                     <Link to="/admin">Admin</Link>
                     <AuthButton />
                     <Switch>
