@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import * as classService from '../services/classes';
 
 class SingleBlogPost extends Component {
 
@@ -22,6 +23,17 @@ class SingleBlogPost extends Component {
             console.log(e);
         }
     }
+    async onBtnClick() {
+        console.log('Hello');
+        try {
+            let id = this.props.match.params.id
+            let results = await classService.destroy(id)
+            console.log(results);
+        } catch (err) {
+            console.log('This is the' + err);
+        }
+
+    }
     
     render() {
 
@@ -30,6 +42,7 @@ class SingleBlogPost extends Component {
             <div>
                 {this.state.blog.title}
                 {this.state.blog.content}
+                <button onClick={(event) => this.onBtnClick()}>Delete</button>
                 </div>
         );
     }
