@@ -10,7 +10,7 @@ let router = Router();
 
 router.use('/auth', authRouter);
 
-router.use('/blogList', blogListRouter);
+
 
 router.route('*')
     .post(tokenMiddleware, isLoggedIn)
@@ -18,7 +18,7 @@ router.route('*')
     .delete(tokenMiddleware, isLoggedIn);
 
 router.use('/classes', classesRouter);
-
+router.use('/blogList', blogListRouter);
 /* router.use(tokenMiddleware);
 router.use(isLoggedIn); */
 
