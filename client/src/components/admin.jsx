@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 import * as classService from '../services/classes';
 import BlogInput from './blogInput';
+import BlogList from './blogList';
 
 class BlogAdmin extends Component {
     
@@ -18,6 +19,7 @@ class BlogAdmin extends Component {
         return (
             <div>
                 <BlogInput />
+                <BlogList />
                 </div>
         );
     }
