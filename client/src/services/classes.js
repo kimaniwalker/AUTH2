@@ -1,23 +1,23 @@
 import * as baseService from './base';
 
 function all() {
-    return baseService.get('/api/classes');
+    return baseService.get('/api/blogList');
 }
 
 function one(id) {
-    return baseService.get(`/api/classes/${id}`);
+    return baseService.get(`/api/blogList/${id}`);
 }
 
 function insert(data) {
-    return baseService.post('/api/classes', data);
+    return baseService.post('/api/blogList', data);
 }
 
 function update(id, data) {
-    return baseService.put(`/api/classes/${id}`, data);
+    return baseService.put(`/api/blogList/${id}`, data);
 }
 
 function destroy(id) {
-    return baseService.destroy(`/api/classes/${id}`);
+    return baseService.destroy(`/api/blogList/${id}`);
 }
 
 export { all, one, insert, update, destroy };
