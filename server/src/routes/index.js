@@ -10,6 +10,8 @@ let router = Router();
 
 router.use('/auth', authRouter);
 
+router.use('/blogList', blogListRouter);
+
 router.route('*')
     .post(tokenMiddleware, isLoggedIn)
     .put(tokenMiddleware, isLoggedIn)
@@ -22,6 +24,6 @@ router.use(isLoggedIn); */
 
 router.use('/people', peopleRouter);
 router.use('/users', usersRouter);
-router.use('/blogList', blogListRouter);
+
 
 export default router;
