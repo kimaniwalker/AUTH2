@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import * as classService from '../services/classes';
+import BlogInput from './blogInput';
 
 class BlogAdmin extends Component {
     
@@ -14,7 +15,11 @@ class BlogAdmin extends Component {
     }
 
     render() {
-        return <h1>Goodbye World!</h1>;
+        return (
+            <div>
+                <BlogInput />
+                </div>
+        );
     }
 }
 
