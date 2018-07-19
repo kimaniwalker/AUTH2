@@ -24,7 +24,7 @@ class Navigation extends Component {
                     <AuthButton />
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
-                        <Route path="/blogList" component={BlogList} />
+                        <Route exact path="/blogList" component={BlogList} />
                         <Route path="/bloglist/:id" component={SingleBlogPost} />
                         <Route path="/newPost" component={BlogInput} />
                         <Route path="/login" component={Login} />
