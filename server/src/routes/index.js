@@ -4,6 +4,7 @@ import classesRouter from './classes';
 import authRouter from './auth';
 import usersRouter from './users';
 import blogListRouter from './blogList';
+import contactRouter from './contactform';
 import stripeDonationsRouter from './stripeDonations';
 import { isLoggedIn, tokenMiddleware } from '../middleware/auth.mw';
 
@@ -11,6 +12,7 @@ let router = Router();
 
 router.use('/auth', authRouter);
 router.use('/donate', stripeDonationsRouter);
+router.use('/contact', contactRouter);
 
 
 router.use('/blogList', blogListRouter);
