@@ -20,10 +20,12 @@ class Navigation extends Component {
                     <Link to="/goodbye">Goodbye</Link>
                     <Link to="/blogList">Our Blogs</Link>
                     <Link to="/newPost">New Post</Link>
+                    <Link to="/donate">Donate</Link>
                     <Link to="/admin">Admin</Link>
                     <AuthButton />
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
+                        <Route exact path="/donate" component={HelloWorld} />
                         <Route exact path="/blogList" component={BlogList} />
                         <Route path="/bloglist/:id" component={SingleBlogPost} />
                         <Route path="/newPost" component={BlogInput} />
