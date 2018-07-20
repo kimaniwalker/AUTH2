@@ -10,6 +10,7 @@ import BlogList from './blogList';
 import BlogInput from './blogInput';
 import BlogAdmin from './admin';
 import SingleBlogPost from './singleBlog';
+import Donate from './donate';
 
 
 class Navigation extends Component {
@@ -25,7 +26,7 @@ class Navigation extends Component {
                     <AuthButton />
                     <Switch>
                         <Route exact path="/" component={HelloWorld} />
-                        <Route exact path="/donate" component={HelloWorld} />
+                        <Route exact path="/donate" component={Donate} />
                         <Route exact path="/blogList" component={BlogList} />
                         <Route path="/bloglist/:id" component={SingleBlogPost} />
                         <Route path="/newPost" component={BlogInput} />
